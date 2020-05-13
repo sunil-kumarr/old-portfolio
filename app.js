@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 require("dotenv").config({});
 
 // app.use("/bookmark", bookmarkRoutes);
+app.use(express.static('public'));
 
 app.get("/", (req, res) => {
     res.render("index", {});

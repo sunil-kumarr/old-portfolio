@@ -2,7 +2,7 @@
     "name": "myportfolio",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "dev": "nodemon --exec babel-node app.js",
         "db:migrate": "npx knex migrate:latest"
@@ -21,6 +21,7 @@
         "@babel/core": "^7.9.6",
         "@babel/node": "^7.8.7",
         "@babel/preset-env": "^7.8.4",
+        "bulma": "^0.8.2",
         "dotenv": "^8.2.0",
         "nodemon": "^2.0.2"
     }

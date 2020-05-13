@@ -1,0 +1,41 @@
+    .is-horizontal-center {
+        justify-content: center;
+    }
+    
+    .avatar {
+        border-radius: 50%;
+        z-index: 5;
+    }
+    
+    .avatar-42 {
+        height: 42px;
+        width: 42px;
+    }
+    
+    .avatar-195 {
+        height: 195px;
+        width: 195px;
+    }
+    
+    .brand {
+        height: 128px;
+        width: 128px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "eurostile", sans-serif;
+        font-weight: 800;
+    }
+    
+    .section {
+        background-color: rgb(139, 55, 240);
+    }
+    
+    .intro-text {
+        color: whitesmoke;
+    }
