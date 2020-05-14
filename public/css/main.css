@@ -32,10 +32,98 @@
         font-weight: 800;
     }
     
-    .section {
+    .intro-section {
         background-color: rgb(139, 55, 240);
     }
     
     .intro-text {
         color: whitesmoke;
     }
+    
+    .side-crawler {
+        border-radius:10%;
+        justify-content: center;
+    }
+
+    .side-crawler-title{
+        margin-top: 10px;
+        font-family: "eurostile",sans-serif;
+        font-weight:700;
+    }
+
+    .side-crawler-container{
+        position: fixed;
+        float: left;
+        z-index: 1;
+        margin-top: 30px;
+        left:-80px;
+        top:0;
+    }
+
+    .skills{
+        position: relative;
+        top: -100px;
+        right: 0;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+
+    .image-container{
+        justify-content: center;
+    }
+
+    .info-box{
+        position: relative;
+        right:0 ;
+    }
+
+    .is-skill-icon{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .underline-green{
+        border-bottom:5px solid #00d1b2
+    }
+
+    .underline-slim-green{
+        border-bottom: 2px solid green;
+    }
+
+    .box-shadow-lift{
+        box-shadow:rgba(0,0,0,0.1) 0 7px 25px 0;
+        background: white;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .zoom {
+        transition: transform .2s; /* Animation */
+      }
+    .zoom:hover {
+        transform: scale(1.09); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+
+    .box-shadow-lift:hover {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        animation-name: example;
+        animation-duration: 0.25s;
+        border-bottom: 8px  rgba(0,0,0,0.24);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+      .card-content{
+          justify-content: center;
+      }
+
+      table{
+          border: none;
+          border-color: white;
+      }
+
+      .projects{
+          position: relative;
+          top: -100px;
+      }
