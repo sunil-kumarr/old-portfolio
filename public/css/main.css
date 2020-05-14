@@ -8,8 +8,9 @@
     }
     
     .avatar-42 {
-        height: 42px;
-        width: 42px;
+        height: 50px;
+        width: 50px;
+        border: 1px solid gray ;
     }
     
     .avatar-195 {
@@ -41,25 +42,39 @@
     }
     
     .side-crawler {
-        border-radius:10%;
+        border: 2px solid rebeccapurple;
+        justify-content: center;
+        box-shadow: rgb(139, 55, 240);
+    }
+
+    .bottom-crawler{
+        border: 2px solid black;
         justify-content: center;
     }
-
-    .side-crawler-title{
-        margin-top: 10px;
-        font-family: "eurostile",sans-serif;
-        font-weight:700;
-    }
-
+    
     .side-crawler-container{
         position: fixed;
         float: left;
         z-index: 1;
         margin-top: 30px;
-        left:-80px;
-        top:0;
+        left:-100px;
+        top:20px;
+        bottom: 20px;
+        border-color: black;
     }
 
+    .bottom-crawler-container{
+        position: fixed;
+        float: left,bottom;
+        z-index: 1;
+        bottom: 10px;
+        left:10px
+    }
+
+    .side-button{
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
     .skills{
         position: relative;
         top: -100px;
@@ -127,3 +142,29 @@
           position: relative;
           top: -100px;
       }
+
+      .partner-call{
+          position: relative;
+          bottom: -120px;
+      }
+      .partner-box{
+          background-color: black;
+          color: whitesmoke;
+          padding: 50px;
+      }
+
+      .has-text-patreon{
+          color:#f96854 !important
+        }
+      .button-special:hover{
+          box-shadow:rgba(50,50,93,0.25) 0 30px 60px -12px;
+          transform:translateY(-5px);-webkit-transition:all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+          transition:all 800ms cubic-bezier(0.19, 1, 0.22, 1)
+        }
+      .button-special{border:none}
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    
