@@ -356,7 +356,8 @@
       </div>
     </footer>
 
-<div class="container side-crawler-container">
+<div class="side-crawler-class">
+<div class="container side-crawler-container is-hidden-mobile">
     <div class="columns is-centered">
       <div class="column is-4 is-spaced ">
          <div class="box side-crawler ">
@@ -416,12 +417,12 @@
     </div>
 </div>
 
-<div class="container bottom-crawler-container">
+<div class="container bottom-crawler-container is-hidden-mobile">
     <div class="columns is-centered">
       <div class="column">
         <div class="box bottom-crawler zoom ">
            <a href="#">
-           <button class="button side-button is-outlined is-link side-button">
+           <button onclick="isInView" class="button side-button is-outlined is-link side-button">
             <span class="icon is-small">
               <i class="fas fa-download"></i>
             </span>
@@ -432,3 +433,48 @@
     </div>
  </div>
 </div>
+</div>
+
+<script>
+// The view visiblility checker
+const isViewInViewport = el => {
+	const scroll = window.scrollY || window.pageYOffset
+	const boundsTop = el.getBoundingClientRect().top + scroll
+
+	const viewport = {
+		top: scroll,
+		bottom: scroll + window.innerHeight,
+	}
+
+    const bounds = {
+		top: boundsTop,
+		bottom: boundsTop + el.clientHeight,
+	}
+
+	return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
+		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
+}
+
+
+// Usage.
+document.addEventListener( 'DOMContentLoaded', () => {
+	const tester = document.querySelector( '#nav-section' )
+	const answer = document.querySelector( '.side-crawler-class' )
+	
+	const handler = () => raf( () => {
+		answer.style.display = ( isViewInViewport( tester ) ? 'none' : 'block' )
+	} )
+	
+	handler()
+	window.addEventListener( 'scroll', handler )
+} )
+
+// requestAnimationFrame
+const raf = 
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function( callback ) {
+        window.setTimeout( callback, 1000 / 60 )
+    }
+</script>
