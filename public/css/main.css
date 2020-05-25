@@ -71,6 +71,16 @@
         left:10px
     }
 
+    .bottom-button{
+        position: fixed;
+        float: bottom,left,right;
+        z-index: 1;
+        bottom: 5px;
+        left: 5px;
+        text-align: center;
+        right: 5px;
+    }
+
     .side-button{
        margin-top: 10px;
        margin-bottom: 10px;
