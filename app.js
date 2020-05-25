@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
     res.render("index", {});
 });
 
+app.get("/contactme",(req,res)=>{
+    res.render("contactme",{});
+})
+
 app.get("/downloadResume",(req,res)=>{
     res.download("./MyResume.pdf");
 })
