@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
     res.render("index", {});
 });
 
+app.get("/downloadResume",(req,res)=>{
+    res.download("./MyResume.pdf");
+})
+
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`app is listening on PORT 8080`);
